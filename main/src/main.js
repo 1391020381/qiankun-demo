@@ -3,35 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import { registerMicroApps, start } from 'qiankun'
-
-const apps = [
-  {
-    name: 'reactApp',
-    entry: '//localhost:7100',
-    container: '#reactApp',
-    activeRule: '/react'
-  },
-  {
-    name: 'vueApp',
-    entry: '//localhost:7101',
-    container: '#vueApp',
-    activeRule: "/vue",
-    props: { a: 1 }
-  },
-  {
-    name: 'onlineApp',
-    entry: '//www.jd.com/index.html',
-    container: '#onlineApp',
-    activeRule: '/online'
-  }
-]
-
-// 注册应用
-registerMicroApps(apps)
-
-// 开启
-
-start()
+import microApps from './micro-app'
 
 Vue.config.productionTip = false
 
@@ -40,3 +12,26 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+registerMicroApps(microApps, {
+  beforeLoad: app => {
+    console.log('before load app.name====>>>>>', app.name)
+  },
+  beforeMount: [
+    app => {
+      console.log('[LifeCycle] before mount %c%s', 'color: green;', app.name)
+    }
+  ],
+  afterMount: [
+    app => {
+      console.log('[LifeCycle] after mount %c%s', 'color: green;', app.name)
+    }
+  ],
+  afterUnmount: [
+    app => {
+      console.log('[LifeCycle] after unmount %c%s', 'color: green;', app.name)
+    }
+  ]
+})
+
+start()
