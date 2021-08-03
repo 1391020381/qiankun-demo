@@ -2,21 +2,27 @@
   <div id="layout-wrapper">
     <el-row>
       <el-col :span="6">
-          <el-menu>
-            <el-submenu index="1">
-                <template slot="title">
+        <el-menu>
+          <el-submenu index="1">
+            <template slot="title">
               <i class="el-icon-location"></i>
-               <span>侧边导航</span>
-                 </template>
-                <el-menu-item-group>
-                      <el-menu-item v-for="item in microApps" :class="{active: item.activeRule === current}" :key="item.name" @click="goto(item)">{{ item.name }}</el-menu-item>
-                </el-menu-item-group>
-            </el-submenu>
-          </el-menu>
+              <span>侧边导航</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item
+                v-for="item in microApps"
+                :class="{ active: item.activeRule === current }"
+                :key="item.name"
+                @click="goto(item)"
+                >{{ item.name }}</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
+        </el-menu>
       </el-col>
       <el-col :span="18"><div id="subapp-viewport"></div></el-col>
     </el-row>
-</div>
+  </div>
 </template>
 
 <script>
@@ -62,7 +68,7 @@ export default {
     },
     bindCurrent () {
       const path = window.location.pathname
-      if (this.microApps.findIndex(item => item.activeRule === path) >= 0) {
+      if (this.microApps.findIndex((item) => item.activeRule === path) >= 0) {
         this.current = path
       }
     },

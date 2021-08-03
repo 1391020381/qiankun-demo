@@ -2,7 +2,7 @@ import store from './store'
 const microApps = [
   {
     name: 'sub-vue',
-    entry: '//localhost:7777/',
+    entry: '//localhost:9999/',
     activeRule: '/sub-vue',
     container: '#subapp-viewport', // 子应用挂载的div
     props: {
@@ -11,7 +11,7 @@ const microApps = [
   },
   {
     name: 'sub-react',
-    entry: '//localhost:7788/',
+    entry: '//localhost:8899/',
     activeRule: '/sub-react',
     container: '#subapp-viewport', // 子应用挂载的div
     props: {
