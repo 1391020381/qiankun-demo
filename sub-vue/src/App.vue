@@ -4,10 +4,25 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
-
+<script>
+import { mapState, mapActions } from 'vuex'
+export default {
+  computed: {
+    ...mapState('global', {
+      user: (state) => state.user
+    })
+  },
+  methods: {
+    ...mapActions('global', ['setGlobalState']),
+    update () {
+      this.setGlobalState('user', { name: '张三' })
+    }
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

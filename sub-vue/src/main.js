@@ -3,6 +3,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import routes from './router'
 import store from './store'
+import globalRegister from './store/global-register'
 import VueRouter from 'vue-router'
 
 Vue.config.productionTip = false
@@ -31,7 +32,7 @@ export async function bootstrap () {
 
 export async function mount (props) {
   console.log('[vue] props from main framework', props)
-
+  globalRegister(store, props)
   render(props)
 }
 
