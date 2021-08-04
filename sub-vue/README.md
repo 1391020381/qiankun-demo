@@ -1,24 +1,17 @@
-# sub-vue
+# 打开docker
 
-## Project setup
-```
-yarn install
-```
+#下载docker中下载nginx
+docker pull nginx
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+# 安装vue项目中的npm依赖
+npm install
 
-### Compiles and minifies for production
-```
-yarn build
-```
+# 本地打包，生成dist文件
+npm run build
 
-### Lints and fixes files
-```
-yarn lint
-```
+# docker创建镜像
+docker build -t vue-docker-nginx .
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 本地localhost:4000端口监听容器80容器启动docker
+docker run -p 4000:9999 -d vue-docker-nginx
+
