@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "install": "npm-run-all --serial install:*",
-    "install:main": "cd main && npm i",
-    "install:sub-vue": "cd sub-vue && npm i",
-    "install:sub-react": "cd sub-react && npm i",
+    "install:main": "cd main && pnpm i",
+    "install:sub-vue3": "cd sub-vue3 && pnpm i",
+    "install:sub-react": "cd sub-react && pnpm i",
     "start": "npm-run-all --parallel start:*",
-    "start:sub-react": "cd sub-react && npm start",
-    "start:sub-vue": "cd sub-vue && npm start",
-    "start:main": "cd main && npm start"
+    "start:sub-react": "cd sub-react && npx pnpm dev",
+    "start:sub-vue3": "cd sub-vue3 && npx pnpm dev",
+    "start:main": "cd main && pnpm dev"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "dependencies": {},
   "devDependencies": {
     "npm-run-all": "^4.1.5"
+  },
+  "volta": {
+    "node": "20.0.0"
   }
 }
