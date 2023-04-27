@@ -32,6 +32,15 @@ registerMicroApps([
     props: {
       router
     }
+  },
+  {
+    name: 'sub-viteVue3', // app name registered
+    entry: '//localhost:8899',
+    container: '#sub-app',
+    activeRule: "viteVue3",
+    props: {
+      router
+    }
   }
 ])
 // 启动 qiankun

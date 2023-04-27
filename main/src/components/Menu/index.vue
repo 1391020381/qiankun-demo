@@ -41,6 +41,16 @@
               <el-menu-item index="3-2" route="/vue3/pageTwo">vue3 页面二</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
+          <el-sub-menu index="4">
+            <template #title>
+              <el-icon><Location /></el-icon>
+              <span>vite-vue3 页面</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="4-1" route="/viteVue3/home">vite-vue3 页面一</el-menu-item>
+              <el-menu-item index="4-2" route="/viteVue3/about">vite-vue3 页面二</el-menu-item>
+            </el-menu-item-group>
+          </el-sub-menu>
         </el-menu>
       </el-aside>
       <el-main>
