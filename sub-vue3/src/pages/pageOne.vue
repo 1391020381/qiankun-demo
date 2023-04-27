@@ -44,6 +44,7 @@ actions.onGlobalStateChange((parentState) => {
 
 
 const goMainApp = () => {
+  console.log('goMainApp')
   actions.parentRouter.push({
     path: "qiankun-home"
   })
