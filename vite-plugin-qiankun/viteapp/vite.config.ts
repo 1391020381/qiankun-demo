@@ -1,6 +1,6 @@
 import { UserConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
-import qiankun from "../../dist";
+import qiankun from "vite-plugin-qiankun";
 import path from 'path'
 
 // useDevMode 开启时与热更新插件冲突

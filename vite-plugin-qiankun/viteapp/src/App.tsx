@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import { Divider } from "antd";
-import { qiankunWindow } from "../../../es/helper";
+import { qiankunWindow } from "vite-plugin-qiankun/dist/helper";
 
 import Home from "./pages/Home";
 const About = lazy(() => import("./pages/About"));
