@@ -1,0 +1,16 @@
+{
+  "name": "vite-plugin-qiankun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd main && npm install && cd ../viteapp && npm install && cd ../vue && npm install && cd ../react18 && npm install && cd ../vue3sub && npm install",
+    "dev": "cd main && npm start && cd ../viteapp && npm dev && cd ../vue && npm serve && cd ../react18 && npm dev && cd ../vue3sub && npm dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite-plugin-qiankun": "^1.0.15"
+  }
+}

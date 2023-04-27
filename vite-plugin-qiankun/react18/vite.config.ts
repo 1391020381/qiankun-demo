@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import qiankun from "../../es";
+import qiankun from 'vite-plugin-qiankun';
 
 const useDevMode = true
 

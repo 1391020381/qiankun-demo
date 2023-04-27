@@ -11,18 +11,18 @@ function Render(props) {
   const containerRef = useRef(null)
   
   useEffect(() => {
-    setTimeout(() => {
-      const app = loadMicroApp({
-        name: 'viteapp',
-        entry: 'http://127.0.0.1:7106',
-        container: containerRef.current,
-        props: { brand: 'qiankun' },
-      });
+    // setTimeout(() => {
+    //   const app = loadMicroApp({
+    //     name: 'viteapp',
+    //     entry: 'http://127.0.0.1:7106',
+    //     container: containerRef.current,
+    //     props: { brand: 'qiankun' },
+    //   });
   
-      setTimeout(() => {
-        app.update({testprops: 123})
-      }, 3000)
-    }, 3000)
+    //   setTimeout(() => {
+    //     app.update({testprops: 123})
+    //   }, 3000)
+    // }, 3000)
   }, [])
 
   return (

@@ -22,13 +22,13 @@ const loader = loading => render({ loading });
 
 registerMicroApps(
   [
-    {
-      name: 'viteapp',
-      entry: 'http://127.0.0.1:7106',
-      container: '#subapp-viewport',
-      loader,
-      activeRule: '/viteapp',
-    },
+    // {
+    //   name: 'viteapp',
+    //   entry: 'http://127.0.0.1:7106',
+    //   container: '#subapp-viewport',
+    //   loader,
+    //   activeRule: '/viteapp',
+    // },
     {
       name: 'vue3',
       entry: 'http://127.0.0.1:7105',

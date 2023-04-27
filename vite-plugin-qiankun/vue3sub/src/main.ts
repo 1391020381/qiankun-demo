@@ -1,6 +1,6 @@
 import { App, createApp } from 'vue'
 import app from './App.vue'
-import { renderWithQiankun, qiankunWindow } from "../../../es/helper";
+import { renderWithQiankun, qiankunWindow } from "vite-plugin-qiankun/dist/helper";
 
 let root: App;
 

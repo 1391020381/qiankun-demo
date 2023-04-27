@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM, { Root } from 'react-dom/client'
 import App from './App'
 import './index.css'
-import { renderWithQiankun, qiankunWindow } from "../../../es/helper";
+import { renderWithQiankun, qiankunWindow } from "vite-plugin-qiankun/dist/helper";
 
 let root: Root;
 console.log(React);

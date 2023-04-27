@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-import qiankun from "../../es";
+import qiankun from "vite-plugin-qiankun";
 
 const useDevMode = true
 
